@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+:root { --background:#f8fafc; --foreground:#1e293b; --card:#ffffff; --card-foreground:#1e293b; --popover:#fff; --popover-foreground:#1e293b; --primary:#007b55; --primary-foreground:#fff; --secondary:#e8f4f0; --secondary-foreground:#065f46; --muted:#f1f5f9; --muted-foreground:#64748b; --accent:#e8f4f0; --accent-foreground:#065f46; --destructive:#d32f2f; --border:#e2e8f0; --input:#cbd5e1; --ring:#008767; --radius:1rem; }
+@theme inline { --color-background:var(--background); --color-foreground:var(--foreground); --color-primary:var(--primary); --color-primary-foreground:var(--primary-foreground); --color-muted:var(--muted); --color-muted-foreground:var(--muted-foreground); --color-border:var(--border); --color-destructive:var(--destructive); }
+body { background:var(--background); color:var(--foreground); font-family:Arial,Helvetica,sans-serif; }
+.surface { background:white; border:1px solid #e5ebef; border-radius:1.25rem; box-shadow:0 12px 35px rgba(20,70,60,.06); }
+.field { border:1px solid #cbd5e1; border-radius:.8rem; background:white; padding:.68rem .8rem; width:100%; min-height:2.8rem; }
+.label { display:block; font-size:.875rem; font-weight:600; color:#475569; margin-bottom:.35rem; }
+.action { display:inline-flex; justify-content:center; align-items:center; border-radius:.8rem; padding:.7rem 1rem; background:#007b55; color:white; font-weight:700; min-height:2.75rem; cursor:pointer; }
+.action:disabled { opacity:.5; cursor:not-allowed; }
+.action-secondary { background:#e8f4f0; color:#00684b; }
+.pill { display:inline-block; border-radius:99px; padding:.33rem .7rem; font-weight:700; font-size:.85rem; }
+/* Soft UI Dashboard shell, adapted to Comerío Fire Systems colors. */
+.soft-shell { min-height:100vh; display:flex!important; flex-direction:row!important; gap:0!important; background:#f8f9fa; font-family:'Open Sans',Arial,Helvetica,sans-serif; }
+.soft-sidebar { width:260px; flex:0 0 260px; margin:20px 0 20px 20px; border-radius:20px; padding:20px 13px; background:#fff; box-shadow:0 20px 40px -20px rgba(30,41,59,.18); align-self:flex-start; position:sticky; top:20px; min-height:calc(100vh - 40px); }
+.soft-brand {display:flex; align-items:center; justify-content:center; gap:6px; min-height:64px; font-size:12px; font-weight:800; line-height:1.3; letter-spacing:.35px; color:#344767}
+.soft-brand img {width:74px;height:56px;object-fit:contain}
+.soft-sidebar-rule {height:1px;background:linear-gradient(90deg,transparent,#d8dee5,transparent);margin:15px 18px 23px}
+.soft-nav {display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:5px!important;width:100%!important;height:auto!important;padding:0!important;background:transparent!important;box-shadow:none!important}
+.soft-nav button {width:100%!important;height:52px!important;justify-content:flex-start!important;gap:12px!important;padding:7px 11px!important;border:0!important;border-radius:12px!important;color:#67748e!important;font-size:14px!important;font-weight:600!important;box-shadow:none!important;background:transparent!important}
+.soft-nav button[data-state="active"] {background:#fff!important;color:#344767!important;box-shadow:0 8px 26px rgba(30,41,59,.12)!important}
+.soft-nav svg {box-sizing:content-box;background:#fff;color:#008767;padding:9px;border-radius:10px;box-shadow:0 3px 12px #1e293b13}
+.soft-nav button[data-state="active"] svg {background:linear-gradient(135deg,#009c76,#007b55);color:#fff;box-shadow:0 5px 12px #007b5540}
+.soft-sidebar-note {display:flex;align-items:center;gap:10px;color:#94a3b8;font-size:13px;margin:42px 16px 0}
+.soft-main {flex:1;min-width:0;max-width:1440px;padding:28px 34px 42px}
+.soft-topbar {display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.soft-breadcrumb {font-size:14px;color:#a0aec0}.soft-breadcrumb span {color:#344767}.soft-topbar h1{font-size:16px;font-weight:700;color:#344767;margin-top:3px}.soft-topbar-date{font-size:13px;color:#8392ab}
+.soft-section-heading {margin:0 0 22px}.soft-section-heading span {font-size:12px;letter-spacing:1.2px;font-weight:700;color:#8392ab}.soft-section-heading h2 {font-size:26px;color:#344767;font-weight:700;letter-spacing:-.5px}
+.soft-shell .surface {border:none;border-radius:17px;box-shadow:0 18px 36px -18px rgba(20,30,50,.22),0 4px 13px rgba(30,41,59,.035)}
+.soft-shell .action {background:linear-gradient(130deg,#009b73,#007b55);box-shadow:0 5px 14px #007b5535;border-radius:10px}
+.soft-shell .field {border:1px solid #d2d6da;box-shadow:0 1px 2px #1e293b08;border-radius:9px}
+.soft-shell .field:focus {outline:2px solid #57c8a5;outline-offset:1px}
+.soft-shell h2,.soft-shell b {color:#344767}
+@media(max-width:900px){.soft-shell{flex-direction:column!important}.soft-sidebar{position:static;width:auto;min-height:0;margin:12px;flex:initial;padding:12px}.soft-brand{min-height:48px}.soft-brand img{height:42px}.soft-sidebar-rule,.soft-sidebar-note{display:none}.soft-nav{flex-direction:row!important;overflow-x:auto;white-space:nowrap}.soft-nav button{width:auto!important;flex:0 0 auto!important;height:46px!important;padding:5px 9px!important}.soft-nav svg{padding:6px}.soft-main{padding:15px 16px 30px}.soft-topbar{margin-bottom:18px}}
+.soft-stat {display:flex;align-items:center;justify-content:space-between;min-height:126px;gap:14px}
+.soft-stat p {font-size:14px;color:#8392ab;font-weight:600;margin-bottom:5px}
+.soft-stat b {font-size:26px;font-weight:800;color:#344767}
+.soft-stat-icon {height:52px;width:52px;display:grid;place-items:center;flex:0 0 auto;color:#fff;border-radius:12px;background:linear-gradient(135deg,#00a279,#007b55);box-shadow:0 8px 15px #007b5533}
+.soft-stat-icon.soft-stat-alert {background:linear-gradient(135deg,#ef5350,#d32f2f);box-shadow:0 8px 15px #d32f2f33}
